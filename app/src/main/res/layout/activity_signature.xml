@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/signProgreeBg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/marker_progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="... 싸인 저장 중 ..."
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F3F3F3" />
+    <LinearLayout
+        android:id="@+id/buttonLayoutchbtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:paddingTop="2pt"
+        android:paddingBottom="2pt"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="left"
+            android:text="  결제상태"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                style="@android:style/Widget.DeviceDefault.Light.CompoundButton.RadioButton"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="#000000"
+                android:checked="true"
+                android:text="미수금"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                style="@android:style/Widget.DeviceDefault.Light.CompoundButton.RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="#000000"
+                android:text="수금됨"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F3F3F3" />
+
+    <LinearLayout
+        android:id="@+id/selTablistbox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/textTick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="left"
+            android:paddingTop="1pt"
+            android:text="선 굵기"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <SeekBar
+            android:id="@+id/sb_"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="30"
+            android:min="5"
+            android:progress="6" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:gravity="left"
+            android:paddingTop="3pt"
+            android:paddingBottom="0dp"
+            android:text="  작업  금액"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C1C1C1" />
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#FFFFFF" />
+
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#FFFFFF" />
+
+    <LinearLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:background="#FFFFFF"
+
+        android:orientation="horizontal">
+<!--
+/android:focusableInTouchMode="true"
+-->
+
+        <EditText
+            android:id="@+id/inputconame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:cursorVisible="true"
+            android:hint="결제처 정보입력"
+            android:inputType="textPersonName"
+            android:paddingTop="3pt"
+            android:paddingLeft="5pt"
+            android:paddingBottom="3pt"
+            android:text=""
+            android:textColor="#000000"
+            android:textColorHint="#8A9AF5"
+            android:textCursorDrawable="@drawable/mycursor"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#646464" />
+
+    <LinearLayout
+        android:id="@+id/canvasLayout"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:text="위 흰색바탕에 이름과 전화번호를 입력"
+        android:textColor="#104BA5"
+        android:textSize="15sp" />
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/round_button2"
+            android:padding="10sp"
+            android:strokeColor="#C1C1C1"
+            android:text="@string/hint_cancel"
+            android:textColor="#808080"
+            android:textSize="20sp"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button2"
+            android:padding="10sp"
+            android:strokeColor="#C1C1C1"
+            android:text="@string/hint_clear"
+            android:textColor="#808080"
+            android:textSize="20sp"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/getsign"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button2"
+            android:backgroundTint="#FF8040"
+            android:padding="10sp"
+            android:strokeColor="#363535"
+            android:text="작업종료"
+            android:textColor="#292727"
+            android:textSize="20sp"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

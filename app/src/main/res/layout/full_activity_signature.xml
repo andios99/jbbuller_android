@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".Full_signatureActivity">
+
+    <LinearLayout
+        android:id="@+id/signProgreeBg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="100dp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/marker_progress"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:id="@+id/loading_detailstr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="... 작업 완료 적용 중 ..."
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+    <!-- 타이틀 -->
+    <LinearLayout
+        android:id="@+id/LayoutT"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:weightSum="10">
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:text="장비사용 확인서(전자서명)"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- 현장 주소 -->
+    <LinearLayout
+        android:id="@+id/LayoutAddr"
+        android:layout_width="fill_parent"
+        android:layout_margin="0dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="35dp"
+        android:background="#FFFFFF"
+        android:weightSum="10">
+        <ImageButton android:layout_width="10dp" android:layout_height="10dp" android:scaleType="centerCrop" android:background="@android:color/transparent" android:layout_weight="1" app:srcCompat="@drawable/imgspace" />
+        <EditText
+            android:id="@+id/infoaddr"
+            android:layout_width="fill_parent"
+            android:layout_height="37dp"
+            android:layout_weight="6"
+            android:inputType="text"
+            android:layout_margin="0dp"
+            android:layout_marginTop="2dp"
+            android:editable="false"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+        <ImageButton android:layout_width="15dp" android:layout_height="10dp" android:scaleType="centerCrop" android:background="@android:color/transparent" android:layout_weight="1" app:srcCompat="@drawable/imgspace" />
+    </LinearLayout>
+
+    <!-- 일 시간, 차량번호 -->
+    <LinearLayout
+        android:id="@+id/LayoutA"
+        android:layout_width="fill_parent"
+        android:layout_margin="0dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="35dp"
+        android:background="#FFFFFF"
+        android:weightSum="10">
+        <ImageButton android:layout_width="10dp" android:layout_height="10dp" android:scaleType="centerCrop" android:background="@android:color/transparent" android:layout_weight="1" app:srcCompat="@drawable/imgspace" />
+        <EditText
+            android:id="@+id/infovalue1"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_weight="6"
+            android:inputType="text"
+            android:layout_margin="0dp"
+            android:editable="false"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+        <EditText
+            android:id="@+id/infovalue2"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_weight="3"
+            android:inputType="text"
+            android:editable="false"
+            android:textColor="#000000"
+            android:layout_margin="0dp"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/carChangeBtn"
+            android:layout_width="70dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/rouind_thin"
+            android:text="차량변경" />
+        <ImageButton android:layout_width="10dp" android:layout_height="10dp" android:scaleType="centerCrop" android:background="@android:color/transparent" android:layout_weight="1" app:srcCompat="@drawable/imgspace" />
+    </LinearLayout>
+    <!-- 구분 추가시간, 가격 -->
+    <LinearLayout
+        android:id="@+id/LayoutB"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_margin="0dp"
+        android:background="#FFFFFF"
+        android:layout_marginRight="5dp"
+        android:weightSum="10">
+        <ImageButton android:layout_width="10dp" android:layout_height="10dp" android:scaleType="centerCrop" android:background="@android:color/transparent" android:layout_weight="1" app:srcCompat="@drawable/imgspace" />
+        <EditText
+            android:id="@+id/infovalue3"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_weight="6"
+            android:textColor="#000000"
+            android:editable="false"
+            android:textSize="15sp" />
+        <EditText
+            android:id="@+id/infovalue4"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_weight="3"
+            android:editable="false"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+        <Button
+            android:id="@+id/PriceChnageBtn"
+            android:layout_width="70dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/rouind_thin"
+            android:text="가격변경" />
+        <ImageButton android:layout_width="10dp" android:layout_height="10dp" android:scaleType="centerCrop" android:background="@android:color/transparent" android:layout_weight="1" app:srcCompat="@drawable/imgspace" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LayoutC"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="#FFFFFF"
+        android:weightSum="10">
+        <ImageButton android:layout_width="10dp" android:layout_height="10dp" android:scaleType="centerCrop" android:background="@android:color/transparent" android:layout_weight="1" app:srcCompat="@drawable/imgspace" />
+        <TextView
+            android:id="@+id/textMemo"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_marginTop="0dp"
+            android:text="결제메모"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/inputmemo"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:textSize="13sp"
+            android:layout_weight="8" />
+        <ImageButton android:layout_width="10dp" android:layout_height="10dp" android:scaleType="centerCrop" android:background="@android:color/transparent" android:layout_weight="1" app:srcCompat="@drawable/imgspace" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LayoutD"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:weightSum="10">
+        <TextView
+            android:id="@+id/textdxx"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="선굵기"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <SeekBar
+            android:id="@+id/sb_"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:max="30"
+            android:min="5"
+            android:progress="6" />
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F3F3F3" />
+    <LinearLayout
+        android:id="@+id/canvasLayout"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#808080" />
+    <View android:layout_width="match_parent" android:layout_height="5dp" />
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="31dp"
+        android:layout_weight="2"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:weightSum="3.3">
+        <ImageButton android:layout_width="10dp" android:layout_height="10dp" android:scaleType="centerCrop" android:background="@android:color/transparent" android:layout_weight=".1" app:srcCompat="@drawable/imgspace" />
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/round_button2"
+            android:padding="10sp"
+            android:strokeColor="#C1C1C1"
+            android:text="닫기"
+            android:textColor="#808080"
+            android:textSize="17sp"
+            tools:ignore="ButtonStyle" />
+        <ImageButton android:layout_width="5dp" android:layout_height="10dp" android:scaleType="centerCrop" android:background="@android:color/transparent" android:layout_weight=".1" app:srcCompat="@drawable/imgspace" />
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button2"
+            android:padding="10sp"
+            android:strokeColor="#C1C1C1"
+            android:text="@string/hint_clear"
+            android:textColor="#808080"
+            android:textSize="17sp"
+            tools:ignore="ButtonStyle" />
+        <ImageButton android:layout_width="10dp" android:layout_height="10dp" android:scaleType="centerCrop" android:background="@android:color/transparent" android:layout_weight=".1" app:srcCompat="@drawable/imgspace" />
+        <Button
+            android:id="@+id/getsign"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button3"
+            android:padding="10sp"
+            android:strokeColor="#C1C1C1"
+            android:text="작업완료"
+            android:textColor="#808080"
+            android:textSize="17sp"
+            tools:ignore="ButtonStyle" />
+        <ImageButton android:layout_width="10dp" android:layout_height="10dp" android:scaleType="centerCrop" android:background="@android:color/transparent" android:layout_weight=".1" app:srcCompat="@drawable/imgspace" />
+
+    </LinearLayout>
+</LinearLayout>

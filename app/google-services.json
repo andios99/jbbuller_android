@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "792348982015",
+    "firebase_url": "https://arctic-robot-141115.firebaseio.com",
+    "project_id": "arctic-robot-141115",
+    "storage_bucket": "arctic-robot-141115.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792348982015:android:76ce958b9ec6a5a5",
+        "android_client_info": {
+          "package_name": "co.kr.skycall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "792348982015-vo9fhnseabtfe6ot38kdq0cd11011gqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF2Hoo-gl25p2bBvaIeh5UYGPdUIK1-io"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

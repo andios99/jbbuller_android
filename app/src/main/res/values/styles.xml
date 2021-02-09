@@ -1,0 +1,75 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:ignore="NewApi">true</item>
+        <item name="android:windowTranslucentStatus" tools:ignore="NewApi">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+    <style name="FullscreenTheme" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">@color/colorWhite</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus" tools:ignore="NewApi">true</item>
+    </style>
+    <style name="Theme.Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="FullscreenActionBarStyle" parent="android:Widget.Holo.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Theme.DoNotDim" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="MultiGradient">
+        <item name="android:background">@drawable/selector_multi_gradients</item>
+        <item name="android:padding">@dimen/button_padding</item>
+        <item name="android:textColor">@drawable/selector_color</item>
+    </style>
+    <style name="messageyesno" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">#293853</item>
+        <item name="android:textSize">18sp</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">#090000</item>
+        <!-- Used for the background -->
+        <item name="android:background">@android:color/white</item>
+    </style>
+    <style name="MyAlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:colorPrimary">#00397F</item>
+        <item name="android:textColorPrimary">#22397F</item>
+        <item name="android:colorAccent">#00397F</item>
+        <item name="colorPrimaryDark">#22397F</item>
+        <item name="android:colorBackground">@android:color/white</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="MyAlertDialoPopup" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:colorPrimary">#00397F</item>
+        <item name="android:textColorPrimary">#22397F</item>
+        <item name="android:colorAccent">#00397F</item>
+        <item name="colorPrimaryDark">#22397F</item>
+        <item name="android:colorBackground">@android:color/holo_red_dark</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/popup_background</item>
+    </style>
+    <style name="MyAlertDialogStyle" parent="@style/Theme.AppCompat.Dialog.Alert">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textColorPrimary">#525151</item>
+        <item name="android:colorAccent">#000000</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>
