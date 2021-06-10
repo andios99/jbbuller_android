@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="co.kr.skycall">
+    package="co.kr.jbbuller">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
@@ -16,12 +16,12 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="co.kr.skycall.MY_PERMISSION" />
+<!--    <uses-permission android:name="co.kr.skycall.MY_PERMISSION" />-->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-    <uses-permission android:name="co.kr.skycall.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="co.kr.jbbuller.permission.C2D_MESSAGE" android:protectionLevel="signature" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -38,7 +38,7 @@
 
     <application
         android:name="androidx.multidex.MultiDexApplication"
-        android:authorities="co.kr.skycall"
+        android:authorities="co.kr.jbbuller"
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
@@ -54,7 +54,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="co.kr.skycall.provider"
+            android:authorities="co.kr.jbbuller.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -63,7 +63,7 @@
         </provider>
         <!-- Main activity -->
         <activity
-            android:name=".MainActivity"
+            android:name="co.kr.jbbuller.MainActivity"
             android:hardwareAccelerated="true"
             android:label="@string/app_name"
             android:launchMode="singleTask"
@@ -88,7 +88,7 @@
         </activity>
 
         <activity
-            android:name=".Pupup_notice"
+            android:name="co.kr.jbbuller.Pupup_notice"
             android:theme="@style/Theme.DoNotDim"
             android:launchMode="singleTop"
             android:excludeFromRecents = "true"
@@ -97,7 +97,7 @@
         <meta-data android:name="com.kakao.sdk.AppKey"
             android:value="@string/kakao_app_key" />
         <activity
-            android:name=".MultiImageChooserActivity"
+            android:name="co.kr.jbbuller.MultiImageChooserActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -106,7 +106,7 @@
         </activity>
 
         <activity
-            android:name=".Full_signatureActivity"
+            android:name="co.kr.jbbuller.Full_signatureActivity"
             android:theme="@android:style/Theme.NoTitleBar"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -116,7 +116,7 @@
         </activity>
 
         <activity
-            android:name=".SignatureActivity"
+            android:name="co.kr.jbbuller.SignatureActivity"
             android:theme="@android:style/Theme.Holo.Dialog.NoActionBar"
             android:screenOrientation="unspecified">
             <intent-filter>
@@ -127,7 +127,7 @@
 
 
         <activity
-            android:name=".popup_page"
+            android:name="co.kr.jbbuller.popup_page"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             >
             <intent-filter>
@@ -137,7 +137,7 @@
         </activity>
 
         <activity
-            android:name=".VideoPlayer"
+            android:name="co.kr.jbbuller.VideoPlayer"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             >
             <intent-filter>
@@ -150,7 +150,7 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <receiver android:name=".Incoming_ready"
+        <receiver android:name="co.kr.jbbuller.Incoming_ready"
             android:enabled="true"
             android:exported="true" >
             <intent-filter android:priority="1">
@@ -159,7 +159,7 @@
             </intent-filter>
 
             <intent-filter>
-                <action android:name="co.kr.skycall.restart" />
+                <action android:name="co.kr.jbbuller.restart" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -167,7 +167,7 @@
         </receiver>
 
         <receiver
-            android:name="co.kr.skycall.GcmBroadcastReceiver"
+            android:name="co.kr.jbbuller.GcmBroadcastReceiver"
             android:enabled="true"
             android:label="GCMReciver"
             android:permission="com.google.android.c2dm.permission.SEND">
@@ -177,7 +177,7 @@
             </intent-filter>
 
             <intent-filter>
-                <action android:name="co.kr.skycall.restart" />
+                <action android:name="co.kr.jbbuller.restart" />
                 <action android:name="android.intent.action.PACKAGE_REMOVED" />
             </intent-filter>
             <intent-filter>
@@ -190,35 +190,35 @@
         </receiver>
 
         <service
-            android:name=".soundPlay_Background"
+            android:name="co.kr.jbbuller.soundPlay_Background"
             android:process=".remote"
             android:exported="false"
             android:permission="">
         </service>
 
         <service
-            android:name=".MyTell"
+            android:name="co.kr.jbbuller.MyTell"
             android:process=".remote"
             android:exported="false"
             android:permission="">
             <intent-filter>
-                <action android:name="co.kr.skycall.TTS" />
+                <action android:name="co.kr.jbbuller.TTS" />
             </intent-filter>
             <intent-filter>
-                <action android:name="co.kr.skycall.TTS.TOGGLE_PLAYBACK" />
+                <action android:name="co.kr.jbbuller.TTS.TOGGLE_PLAYBACK" />
             </intent-filter>
         </service>
 
         <service
-            android:name=".AndroidLocationServices"
+            android:name="co.kr.jbbuller.AndroidLocationServices"
             android:process=".remote"
             android:exported="false"
             android:permission="">
             <intent-filter>
-                <action android:name="co.kr.skycall.AndroidLocationServices_allget123" />
+                <action android:name="co.kr.jbbuller.AndroidLocationServices_allget123" />
             </intent-filter>
             <intent-filter>
-                <action android:name="co.kr.skycall.AndroidLocationServices.TOGGLE_PLAYBACK" />
+                <action android:name="co.kr.jbbuller.AndroidLocationServices.TOGGLE_PLAYBACK" />
             </intent-filter>
         </service>
 
@@ -231,7 +231,7 @@
             android:theme="@style/AppTheme.Louvre.Preview" />
 
         <activity
-            android:name=".Image_Zoomer"
+            android:name="co.kr.jbbuller.Image_Zoomer"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

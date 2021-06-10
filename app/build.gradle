@@ -33,18 +33,14 @@ allprojects {
 
 // targetSdkVersion 26 이상 빌드요망
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     buildToolsVersion '28.0.3'
     defaultConfig {
-        applicationId 'co.kr.skycall'
+        applicationId 'co.kr.jbbuller'
         minSdkVersion 21
-        targetSdkVersion 28
-
-        //versionCode 1124
-        //versionName "11.24"
-
-        versionCode 126
-        versionName "2.26"
+        targetSdkVersion 29
+        versionCode 1
+        versionName "3.0"
 
         useLibrary 'org.apache.http.legacy'
         multiDexEnabled true

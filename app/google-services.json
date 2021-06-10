@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:792348982015:android:76ce958b9ec6a5a5",
+        "mobilesdk_app_id": "1:792348982015:android:b9eef3182b651881dd2aca",
         "android_client_info": {
-          "package_name": "co.kr.skycall"
+          "package_name": "co.kr.jbbuller"
         }
       },
       "oauth_client": [
@@ -25,15 +25,42 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "792348982015-vo9fhnseabtfe6ot38kdq0cd11011gqo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792348982015:android:76ce958b9ec6a5a5",
+        "android_client_info": {
+          "package_name": "co.kr.jbbuller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "792348982015-vo9fhnseabtfe6ot38kdq0cd11011gqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF2Hoo-gl25p2bBvaIeh5UYGPdUIK1-io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "792348982015-vo9fhnseabtfe6ot38kdq0cd11011gqo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

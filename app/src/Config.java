@@ -1,4 +1,4 @@
-package co.kr.skycall;
+package co.kr.jbbuller;
 
 public class Config {
     // File upload url (replace the ip with your server address)
